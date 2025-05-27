@@ -1,0 +1,144 @@
+/* 💡 화면 전체 높이 + column 레이아웃 구성 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  padding-bottom: 80px;
+}
+
+/* 🧱 헤더 영역 */
+header {
+  background: #333333;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+nav {
+  margin-top: 0.5em;
+}
+
+nav a {
+  color: #1a73e8;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 📦 메인 3단 레이아웃 컨테이너 */
+.container {
+  flex: 1; /* body에서 남는 공간 모두 차지 */
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+/* 👤 왼쪽 사이드바 */
+.sidebar {
+  width: 220px;
+  background-color: #f8f8f8;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar fieldset {
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.sidebar legend {
+  font-weight: bold;
+}
+
+.field {
+  margin-bottom: 1em;
+}
+
+.field strong {
+  display: inline-block;
+  width: 90px;
+  color: #333;
+}
+
+/* 📝 가운데 본문 콘텐츠 */
+.content {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.content h2 {
+  margin-top: 0;
+}
+
+.content article {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1em;
+}
+
+.date {
+  font-size: 0.85em;
+  color: #777;
+}
+
+.summary {
+  color: #444;
+}
+
+/* 📚 오른쪽 글 목록 박스 */
+.postlist {
+  width: 220px;
+  background-color: #f8f8f8;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.postlist fieldset {
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.postlist legend {
+  font-weight: bold;
+}
+
+.postlist ul {
+  padding-left: 1em;
+  margin: 0;
+}
+
+.postlist li {
+  margin-bottom: 0.5em;
+}
+
+/* 📎 푸터 - 항상 하단 고정됨 */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f0f0f0;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.8em;
+  z-index: 999;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
